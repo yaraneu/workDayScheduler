@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  // listen for save button clicks
+  // save button event listener
   $(".saveBtn").on("click", function() {
     // get nearby values
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
-    // save in localStorage
+    // saving events in localStorage
     localStorage.setItem(time, value);
   });
 
@@ -13,11 +13,11 @@ $(document).ready(function() {
     // get current number of hours
     var currentHour = moment().hours();
 
-    // loop over time blocks
+    // looping over time blocks
     $(".time-block").each(function() {
       var blockHour = parseInt($(this).attr("id"));
 
-      // check if we've moved past this time
+      // conditioning past, present, and future time
       if (blockHour < currentHour) {
         $(this).addClass("past");
       } 
@@ -38,7 +38,7 @@ $(document).ready(function() {
   // set up interval to check if current time needs to be updated
   var interval = setInterval(hourUpdater, 15000);
 
-  // load saved data from localStorage
+  // saved data from localStorage
   $("#7 .description").val(localStorage.getItem("7"));
   $("#8 .description").val(localStorage.getItem("8"));
   $("#9 .description").val(localStorage.getItem("9"));
@@ -48,6 +48,6 @@ $(document).ready(function() {
   $("#13 .description").val(localStorage.getItem("13"));
   
 
-  // display current day on page
+  // display current date
   $("#currentDay").text(moment().format("dddd, MMMM Do"));
 });
