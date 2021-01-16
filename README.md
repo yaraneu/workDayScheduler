@@ -102,5 +102,9 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
+## Resources
+
+* https://www.youtube.com/watch?v=n80RRNS1k64
+* https://github.com/kassimariemc/work-day-scheduler/blob/master/script.js 
 - - -
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
